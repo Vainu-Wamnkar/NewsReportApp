@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+    margin: 0 40px;
+}
+
+nav {
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.company-logo img {
+    width: 120px;
+}
+
+.nav-link ul {
+    gap: 16px;
+}
+
+.hover-link {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+    color: red;
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.card-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 300px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
+
+/* Responsive page design */  
+@media only screen and (max-width:480px){
+    body{
+        background-color: pink;
+        width: 100%;
+    }
+    .company-logo img{
+        width: 60px;
+        
+    }
+    .nav-link ul{
+        gap: 8px;
+    }
+    .search-bar {
+        height: 22px;
+        gap: 8px;
+    }
+    .hover-link {
+        font-size: 12px;
+    }
+    .news-input {
+        width: 100px;
+        height: 100%;
+        padding-inline: 8px;
+        font-family: "Roboto", sans-serif;
+        outline: none;
+        font-size: 10px;
+    }
+    .search-button {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 3px 4px;
+        font-size: 10px;
+    }
+    .main-nav{
+        margin: 0 20px;
+    }
+    .card-container{
+      margin-inline: 15%;
+    }
+}
+
+
+@media only screen and(max-width:300px ) {
+    body{
+        /* background-color: pink; */
+        width: 100%;
+    }
+    .company-logo img{
+        width:30px;
+        
+    }
+    .nav-link ul{
+        gap: 5px;
+    }
+    .search-bar {
+        height: 20px;
+        gap: 6px;
+    }
+    .hover-link {
+        font-size: 8px;
+    }
+    .news-input {
+        width: 25px;
+        height: 100%;
+        padding-inline: 4px;
+        font-family: "Roboto", sans-serif;
+        outline: none;
+        font-size: 5px;
+    }
+    .search-button {
+        color: white;
+        padding: 4px 4px;
+    }
+    .main-nav{
+        gap: 5px;
+    }
+    .card-container{
+      margin-inline: 15%;
+    }
+    nav{
+        margin-inline: 10px;
+    }
+}
+
+@media only screen and (max-width:580px){
+    body{
+        /* background-color: orange; */
+        width: 100%;
+    }
+    .company-logo img{
+        width: 60px;
+        
+    }
+    .nav-link ul{
+        gap: 10px;
+    }
+    .search-bar {
+        height: 24px;
+        gap: 10px;
+    }
+  
+
+    .news-input {
+        width: 80px;
+        height: 100%;
+        padding-inline: 8px;
+        font-family: "Roboto", sans-serif;
+        outline: none;
+        font-size: 12px;
+    }
+    .search-button {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 3px 4px;
+        font-size: 12px;
+    }
+    .main-nav{
+        margin: 0 20px;
+    }
+
+}
+@media only screen and (max-width:270px){
+    img{
+        width: 40px;
+        height: 20px;
+    }
+    .card{
+        width: 100%;
+    }
+    .news-input{
+        width: 50px;
+    }
+    .search-button{
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width:677px)
+{
+    .card-container{
+        row-gap: 10px;
+    }
+}
